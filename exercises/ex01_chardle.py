@@ -15,19 +15,19 @@ else:
         print("Searching for " + character + " in " + word)
         count: int = 0
 
-        if(character == word [0]): 
+        if (character == word [0]): 
             print(character + " found at " + "index 0")
             count += 1
-        if(character == word [1]):
+        if (character == word [1]):
             print(character + " found at " + "index 1")
             count += 1
-        if(character == word [2]):
+        if (character == word [2]):
             print(character + " found at " + "index 2")
             count += 1
-        if(character == word [3]):
+        if (character == word [3]):
             print(character + " found at " + "index 3")
             count += 1
-        if(character == word [4]):
+        if (character == word [4]):
             print(character + " found at " + "index 4")
             count += 1
 
