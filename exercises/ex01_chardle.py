@@ -21,7 +21,7 @@ else:
         if (character == word[1]):
             print(character + " found at " + "index 1")
             count += 1
-        if( character == word[2]):
+        if (character == word[2]):
             print(character + " found at " + "index 2")
             count += 1
         if (character == word[3]):
