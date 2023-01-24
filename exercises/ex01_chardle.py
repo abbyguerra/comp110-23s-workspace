@@ -3,14 +3,16 @@
 __author__ = "730556346"
 
 word: str = input ("Enter a 5-character word: ")
-if len(word) != 5: 
+if len (word) != 5: 
     print ("Error: Word must contain 5 characters")
+    exit ()
 else:
     character: str = input ("Enter a single character: ")
-    if len(character) != 1:
+    if len (character) != 1:
         print ("Error: Character must be a single character.")
+        exit ()
     else:
-        print("Searching for " + character + " in " + word)
+        print ("Searching for " + character + " in " + word)
         count: int = 0
 
         if (character == word [0]): 
@@ -34,4 +36,4 @@ else:
         if count ==1:
             print ("1 instance of " + character + " found in " + word)
         else: 
-            print(str(count) + " instances of " + character + " found in " + word)
+            print (str(count) + " instances of " + character + " found in " + word)
