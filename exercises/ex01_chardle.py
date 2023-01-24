@@ -26,7 +26,7 @@ else:
             count += 1
         if (character == word [3]):
             print (character + " found at " + "index 3")
-            count+=1
+            count += 1
         if (character == word [4]):
             print (character + " found at " + "index 4")
             count += 1
