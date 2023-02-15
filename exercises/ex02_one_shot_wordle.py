@@ -21,26 +21,26 @@ alt: int = 0
 if letter is True: 
     emoji = emoji + GREEN_BOX
 
-while index < len(SECRET): # while the character being analyzed is indexed at less than the total letters in the secret word 
+while index < len(SECRET):  # while the character being analyzed is indexed at less than the total letters in the secret word 
     if guess[index] == SECRET[index]: 
         emoji = emoji + GREEN_BOX
         # if the letter is correct and in the correct position, store a green box 
     else: 
         alt = 0
         letter = False
-        while letter is False and alt < len(SECRET): # the character guessed is not in the correct position but is correct
+        while letter is False and alt < len(SECRET):  # the character guessed is not in the correct position but is correct
             if SECRET[alt] == guess[index]:
                 emoji = emoji + YELLOW_BOX
                 letter = True
             alt = alt + 1
-        if letter is False: # the character guessed is not in the secret word 
+        if letter is False:  # the character guessed is not in the secret word 
             alt = alt + 1
             emoji = emoji + WHITE_BOX
     index = index + 1 
 
 print(emoji)
 
-if guess == SECRET: # the guess is the same as the secret word
+if guess == SECRET:  # the guess is the same as the secret word
     print("Woo! You got it!")
 else: 
     print("Not quite. Play again soon!")
