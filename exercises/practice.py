@@ -1,10 +1,10 @@
 """Example environment diagram for conditionals.""" 
 
 secret: int = 3
-guess: int = 1
+guess: int = 4
 
 if guess == secret: 
-    print("Success")
+    print("Success!")
     print(str(guess) + " is the secret number!")
 else:
     guess = guess + 1 
