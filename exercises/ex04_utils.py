@@ -1,7 +1,9 @@
 """List utility functions."""
 __author__ = "730556346"
 
+
 def all(list0: "list[int]", item: int) -> bool:
+    """Checking for matching ints."""
     if list0 == list(): 
         return False
     index: int = 0
@@ -12,8 +14,9 @@ def all(list0: "list[int]", item: int) -> bool:
             index = index + 1
     return True 
 
+
 def max(input: "list[int]") -> int: 
-    """Find the max value int"""
+    """Finding the highest int value."""
     high_value = input[0]
     index: int = 0
     if len(input) == 0: 
@@ -26,8 +29,9 @@ def max(input: "list[int]") -> int:
             index = index + 1 
     return high_value 
 
-def is_equal(list1: "list[int]", list2: "list[int]"): 
-    """See if both lists are equal"""
+
+def is_equal(list1: "list[int]", list2: "list[int]") -> bool:
+    """Checking for equal lists."""
     if len(list1) != len(list2): 
         return False 
     index: int = 0 
@@ -37,9 +41,3 @@ def is_equal(list1: "list[int]", list2: "list[int]"):
         else: 
             index = index + 1
     return True 
-    
-
-
-
-    
-
