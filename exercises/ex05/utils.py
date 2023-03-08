@@ -2,7 +2,7 @@
 
 __author__ = "730556346"
 
-def only_evens(input: int) -> int: 
+def only_evens(input: 'list[int]') -> list(int): 
     """Listing only even numbers."""
     even_list = ""
     for num in input: 
@@ -10,7 +10,7 @@ def only_evens(input: int) -> int:
             even_list.append(num)
     return even_list 
 
-def concat(list1: int, list2: int) -> int: 
+def concat(list1: 'list[int]', list2: 'list[int]') -> list(int): 
     """"""
     new_list = ""
     for num in list1: 
@@ -19,6 +19,6 @@ def concat(list1: int, list2: int) -> int:
         new_list.append(num)
     return new_list
 
-def sub(list:'list[int]',start: int, end: int) -> int:
+def sub(list:'list[int]',start: int, end: int) -> list(int):
     """"""
     return list[start:end]
