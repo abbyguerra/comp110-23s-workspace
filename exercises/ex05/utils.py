@@ -22,7 +22,7 @@ def concat(list1: 'list(int)', list2: 'list(int)') -> int:
     return new_list
 
 
-def sub(list:'list(int)', start: int, end: int) -> 'list(int)':
+def sub(list: 'list(int)', start: int, end: int) -> 'list(int)':
     """Making a subset of a list."""
     if len(list) == 0 or start >= len(list) or end <= 0: 
         return []
