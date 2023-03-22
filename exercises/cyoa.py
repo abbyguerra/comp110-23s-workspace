@@ -10,9 +10,9 @@ points: int = 0
 player: str = ""
 
 # Constants 
-EMOJI_COIN = "\U0001FA99"
-EMOJI_HEADS = "\U0001f1ED"
-EMOJI_TAILS = "\U0001F1F9"
+EMOJI_COIN: str = "\U0001FA99"
+EMOJI_HEADS: str = "\U0001f1ED"
+EMOJI_TAILS: str = "\U0001F1F9"
 
 
 def main() -> None:
@@ -25,7 +25,7 @@ def main() -> None:
 def greet() -> None: 
     """Greeting the player and asking for their name."""
     global player
-    player: str = input("Before we begin, what is your name? ")
+    player = input("Before we begin, what is your name? ")
     print(f"Welcome {player}! In this game you will be asked to guess the correct side of coin before it is flipped entering either 'h' or 't'.\n ")
     return None
     
