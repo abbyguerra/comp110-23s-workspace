@@ -49,14 +49,14 @@ def coin_flip(points: int) -> int:
     
     
 # Custom function
-def more(correct_number: int) -> None:
+def more() -> int:
     """Asks the user to guess a number, gives them 3 attempts, and updates their score accordingly."""
     global points
     print(f"\n{player}, let's try something different.\n")
     print("Please guess a number between 1 and 10. You will have 3 guesses and each incorrect guess will deduct 1 point from your total score.")
     correct_number: int = random.randint(1, 10)
     for i in range(3): 
-        guess = int(input(f"Attempt {i+1}: "))
+        guess: int = input(f"Attempt {i+1}: ")
         if guess == correct_number: 
             points += 1
             print(f"Congratulations, your guess is correct! Your score is now {points}!")
@@ -65,16 +65,16 @@ def more(correct_number: int) -> None:
             points -= 1
     else:
         print(f"Sorry, you did not guess the correct number in 3 guesses. Your final score is {points}.")
-
+ 
 
 # Game loop
-def loop(choice: int) -> None:
+def loop() -> None:
     """Asks the player to choose an action running the main game loop."""
     global points
     while True: 
         print("What would you like to do next?\n1. Guess the side of the coin\n2. Additional interaction\n3. Quit the game\n ")
         choice: int = input("Enter the number of your choice: ")
-        if choice == "1": 
+        if choice == "1":
             points = coin_flip(points)
         if choice == "2": 
             more()
