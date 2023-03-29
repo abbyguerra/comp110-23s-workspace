@@ -14,7 +14,7 @@ def invert(dict1: 'dict[str,str]') -> 'dict[str,str]':
 def favorite_color(dict2: 'dict[str,str]') -> str: 
     """Returning the most frequent color."""
     favorite: str = " "
-    frequent: 0
+    frequent: int = 0
     colors: dict[str,int] = []
     for x in dict2.values(): 
         if x in colors: 

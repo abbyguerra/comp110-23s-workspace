@@ -2,47 +2,54 @@
 
 __author__ = "730556346"
 
-def test_invert() -> None:
-    """Edge case: testing with an empty dict."""
-    assert invert[()] == []
+from exercises.ex07.dictionary import invert, favorite_color, count
 
 
 def test_invert() -> None:
-    """Use case: inverting str in a list."""
-    assert invert[('apple': 'cat')] == ['cat': 'apple']
+    """Edge case: testing with duplicate values."""
+    try: 
+        invert({'red': 'pink', 'pink': 'red'})
+        assert False, "Expected KeyError"
+    except KeyError:
+        pass
 
 
-def test_invert() -> None:
-    """Use case: inverting str in a dict using chr."""
-    assert invert[('a': 'b', 'c': 'd')] == ['b': 'a', 'd': 'c']
+def test_invert_1() -> None:
+    """Use case: testing with unique str."""
+    assert invert({'cat': 'dog'}) == {'dog': 'cat'}
+
+
+def test_invert_1() -> None:
+    """Use case: testing with unique str."""
+    assert invert({'a': 'b', 'c': 'd'}) == {'b': 'a', 'd': 'c'}
 
 
 def test_favorite_color() -> None:
-    """Edge case: testing with an empty dict"""
-    assert favorite_color[()] == []
+    """Edge case: testing with unique values"""
+    assert favorite_color({'Marc': 'red', 'John': 'blue', 'Alisha': 'orange'}) == {'red'}
 
 
-def test_favorite_color() -> None:
-    """Use case: printing the most popular color."""
-    assert favorite_color[('Marc': 'yellow', 'John': 'blue', 'Billy': 'blue')] == ['blue']
+def test_favorite_color_1() -> None:
+    """Use case: testing with tied frequencies."""
+    assert favorite_color({'Marc': 'yellow', 'John': 'blue', 'Billy': 'blue', 'Jack': 'yellow'}) == {'blue'}
 
 
-def test_favorite_color() -> None:
-    """Use case: """
-    assert favorite_color[()] == []
-
-
-def test_count() -> None: 
-    """Edge case: """
-    assert count[()] == []
+def test_favorite_color_2() -> None:
+    """Use case: testing with one clear winner """
+    assert favorite_color({'Alexa': 'pink', 'Abby': 'blue', 'Amy': 'pink'}) == {'pink'}
 
 
 def test_count() -> None: 
-    """Use case: """
-    assert count[()] == []
+    """Edge case: testing with an empty list."""
+    assert count({}) == ()
 
 
-def test_count() -> None: 
-    """Use case: """
-    assert count[()] == []
+def test_count_1() -> None: 
+    """Use case: testing with duplicates """
+    assert count({'cat', 'dog', 'bunny', 'dog'}) == {'cat': 1, 'dog': 2, 'bunny': 1}
+
+
+def test_count_2() -> None: 
+    """Use case: testing with unique items"""
+    assert count({'red', 'orange', 'yellow'}) == {'red': 1, 'orange': 1, 'yellow': 1}
 
