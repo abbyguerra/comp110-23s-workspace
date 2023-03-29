@@ -2,20 +2,22 @@
 
 __author__ = "730556346"
 
-def invert(dict1: 'dict[str,str]') -> 'dict[str,str]': 
+
+def invert(dict1: 'dict[str, str]') -> 'dict[str, str]': 
     """Inverting the dictionary."""
-    output: dict[str,str] = {}
+    output: dict[str, str] = {}
     for x in dict1:
+        if [dict1[x]] in output:
+            raise ValueError("Duplicate Keys!")
         output[dict1[x]] = x
-    if len(output) < len(dict1): 
-        raise KeyError ("Duplicate Keys!")
     return output
 
-def favorite_color(dict2: 'dict[str,str]') -> str: 
+
+def favorite_color(dict2: 'dict[str, str]') -> str: 
     """Returning the most frequent color."""
-    favorite: str = " "
+    favorite: str = []
     frequent: int = 0
-    colors: dict[str,int] = []
+    colors: dict[str, int] = {}
     for x in dict2.values(): 
         if x in colors: 
             colors[x] += 1
@@ -24,8 +26,9 @@ def favorite_color(dict2: 'dict[str,str]') -> str:
     for y in colors: 
         if colors[y] > frequent: 
             frequent = colors[y]
-            favorite = y
+            favorite = {}
     return favorite 
+
 
 def count(list1: 'list[str]') -> 'dict[str, int]': 
     """Counting the items in the list."""
