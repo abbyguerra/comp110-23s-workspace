@@ -7,11 +7,7 @@ from exercises.ex07.dictionary import invert, favorite_color, count
 
 def test_invert() -> None:
     """Edge case: testing with duplicate values."""
-    try: 
-        invert({'red': 'pink', 'pink': 'red'})
-        assert False, "Expected KeyError"
-    except KeyError:
-        pass
+    assert invert({'red': 'pink', 'pink': 'red'}) == ValueError
 
 
 def test_invert_1() -> None:
@@ -19,7 +15,7 @@ def test_invert_1() -> None:
     assert invert({'cat': 'dog'}) == {'dog': 'cat'}
 
 
-def test_invert_1() -> None:
+def test_invert_2() -> None:
     """Use case: testing with unique str."""
     assert invert({'a': 'b', 'c': 'd'}) == {'b': 'a', 'd': 'c'}
 
@@ -41,7 +37,7 @@ def test_favorite_color_2() -> None:
 
 def test_count() -> None: 
     """Edge case: testing with an empty list."""
-    assert count({}) == ()
+    assert count({}) == {}
 
 
 def test_count_1() -> None: 
