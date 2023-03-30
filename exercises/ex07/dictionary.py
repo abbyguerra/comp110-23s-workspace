@@ -7,15 +7,17 @@ def invert(dict1: 'dict[str, str]') -> 'dict[str, str]':
     """Inverting the dictionary."""
     output: dict[str, str] = {}
     for x in dict1:
-        if [dict1[x]] in output:
+        if dict1[x] in output.values():
+            raise ValueError("Duplicate Values!")
+        if dict1[x] in output.key():
             raise ValueError("Duplicate Keys!")
         output[dict1[x]] = x
     return output
 
 
-def favorite_color(dict2: 'dict[str, str]') -> str: 
+def favorite_color(dict2: 'dict[str, str]') -> 'list[str]': 
     """Returning the most frequent color."""
-    favorite: str = []
+    favorite: list[str] = []
     frequent: int = 0
     colors: dict[str, int] = {}
     for x in dict2.values(): 
@@ -23,10 +25,11 @@ def favorite_color(dict2: 'dict[str, str]') -> str:
             colors[x] += 1
         else: 
             colors[x] = 1
-    for y in colors: 
-        if colors[y] > frequent: 
-            frequent = colors[y]
-            favorite = {}
+        if colors[x] > frequent: 
+            frequent = colors[x]
+            favorite = [x]
+        elif colors[x] == frequent:
+            favorite.append(x)
     return favorite 
 
 
