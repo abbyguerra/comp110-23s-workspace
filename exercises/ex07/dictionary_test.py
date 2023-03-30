@@ -7,12 +7,11 @@ from exercises.ex07.dictionary import invert, favorite_color, count
 
 def test_invert() -> None:
     """Edge case: testing with duplicate values."""
-    try: 
-        invert({'red': 'pink', 'pink': 'red'}) 
-    except KeyError: 
-        assert True
-    else: 
-        assert False 
+    try:
+        invert({'amy': 'steve', 'katie': 'steve'}) 
+        assert False, "Exception not raised!"
+    except KeyError as x: 
+        assert str(x) == "Duplicate Keys!"
 
 
 def test_invert_1() -> None:
@@ -27,12 +26,12 @@ def test_invert_2() -> None:
 
 def test_favorite_color() -> None:
     """Edge case: testing with unique values."""
-    assert favorite_color({'Marc': 'red', 'John': 'blue', 'Alisha': 'orange'}) == ['red']
+    assert favorite_color({'Marc': 'red', 'John': 'blue', 'Alisha': 'orange'})[0] == 'red'
 
 
 def test_favorite_color_1() -> None: 
     """Use case: testing with tied frequencies."""
-    assert favorite_color({'Marc': 'yellow', 'John': 'blue', 'Billy': 'blue', 'Jack': 'yellow'}) == ['blue']
+    assert favorite_color({'Marc': 'yellow', 'John': 'blue', 'Billy': 'blue', 'Jack': 'yellow'})[0] == 'yellow'
 
 
 def test_favorite_color_2() -> None:
