@@ -26,17 +26,17 @@ def test_invert_2() -> None:
 
 def test_favorite_color() -> None:
     """Edge case: testing with unique values."""
-    assert favorite_color({'Marc': 'red', 'John': 'blue', 'Alisha': 'orange'})[0] == 'red'
+    assert favorite_color({'Marc': 'red', 'John': 'blue', 'Alisha': 'orange'}) == 'red'
 
 
 def test_favorite_color_1() -> None: 
     """Use case: testing with tied frequencies."""
-    assert favorite_color({'Marc': 'yellow', 'John': 'blue', 'Billy': 'blue', 'Jack': 'yellow'})[0] == 'yellow'
+    assert favorite_color({'Marc': 'yellow', 'John': 'blue', 'Billy': 'blue', 'Jack': 'yellow'}) == 'yellow'
 
 
 def test_favorite_color_2() -> None:
     """Use case: testing with one favorite color."""
-    assert favorite_color({'Alexa': 'pink', 'Abby': 'pink', 'Amy': 'pink'}) == ['pink']
+    assert favorite_color({'Alexa': 'pink', 'Abby': 'pink', 'Amy': 'pink'}) == 'pink'
 
 
 def test_count() -> None:

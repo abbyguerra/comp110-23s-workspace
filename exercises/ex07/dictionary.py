@@ -3,7 +3,7 @@
 __author__ = "730556346"
 
 
-def invert(dict1: 'dict[str, str]') -> 'dict[str, str]':
+def invert(dict1: dict[str, str]) -> dict[str, str]:
     """Inverting the dictionary."""
     output: dict[str, str] = {}
     for x in dict1: 
@@ -13,7 +13,7 @@ def invert(dict1: 'dict[str, str]') -> 'dict[str, str]':
     return output
 
 
-def favorite_color(dict2: 'dict[str, str]') -> str: 
+def favorite_color(dict2: dict[str, str]) -> str: 
     """Returning the most frequent color."""
     favorite: str = ""
     frequent: int = 0
@@ -27,13 +27,13 @@ def favorite_color(dict2: 'dict[str, str]') -> str:
         if colors[y] > frequent: 
             frequent = colors[y]
             favorite = [y]
-    return favorite 
+    return favorite[0]
 
 
-def count(list1: 'list[str]') -> 'dict[str, int]': 
+def count(lst: list[str]) -> dict[str, int]: 
     """Counting the items in the list."""
     result: dict[str, int] = {}
-    for x in list1:
+    for x in lst:
         if x in result: 
             result[x] += 1 
         else: 
