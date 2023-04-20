@@ -1,10 +1,11 @@
-"""File to define River class."""
-
-__author__: 730556346
-
-
+"""Importing the necessary classes."""
 from exercises.ex09.fish import Fish
 from exercises.ex09.bear import Bear
+
+
+"""File to define River class."""
+
+__author__ = "730556346"
 
 
 class River:
@@ -26,8 +27,6 @@ class River:
             if len(self.fish) > 5:
                 self.remove_fish(3)
                 bear.eat(3)
-            else: 
-                bear.not_eating
     
     def check_hunger(self):
         """Removing starving bears from the river."""
@@ -53,7 +52,7 @@ class River:
     
     def view_river(self):
         """Printing the river status.""" 
-        print(f"~~~ Day {self.day} ~~~")
+        print(f"~~~ Day {self.day}: ~~~")
         print(f"Fish population: {len(self.fish)}")
         print(f"Bear population: {len(self.bears)}")
             

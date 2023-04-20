@@ -1,6 +1,6 @@
 """Defining the Fish class."""
 
-__author__: 730556346
+__author__ = "730556346"
 
 
 class Fish:

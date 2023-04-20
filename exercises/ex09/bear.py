@@ -1,6 +1,6 @@
 """Defining the Bear class."""
 
-__author__: 730556346
+__author__ = "730556346"
 
 
 class Bear:
@@ -14,7 +14,7 @@ class Bear:
         """Changing age and hunger score after one day."""
         self.age += 1 
         self.hunger_score -= 1
-        
+
     def eat(self, num_fish: int) -> None: 
         """Adding fish to hunger score each time it eats."""
         self.hunger_score += num_fish 
